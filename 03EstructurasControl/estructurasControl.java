@@ -34,7 +34,19 @@ public class estructurasControl {
         String nombreProducto;
         String binario = "";
         char letra;
-
+        //case 1
+        int edad;
+        float descuento;
+        char socios;
+        //case 3
+        int opConvertir; float cantidadConvertir, fah, cen, ran;
+        double kel;
+        //case 4
+        float numero;
+        //case 5
+        float area, perimetro, base, altura, lado, volumen;
+        double radio;
+        int opFigura;
         do{
             //aqui estara el programa
             System.out.println("Bienvenido al programa: ");
@@ -59,7 +71,19 @@ public class estructurasControl {
 
             switch(opcion){
                 case 1:
-
+                    System.out.println("Ingrese la edad del usuario: ");
+                    edad = entrada.nextInt();
+                    if(edad >= 65){
+                        System.out.println("Es mayor de edad el descuento sera del: %40");
+                    }else if(edad <= 21){
+                        System.out.println("Sus padres son socios? [s] para si o [n] para no: ");
+                        socios = entrada.next().charAt(0);
+                        if(socios == 's'){
+                            System.err.println("Son socios tiene un descuento del:  45%");
+                        }else{
+                            System.out.println("No son socios solo un descuento del: 25%");
+                        }
+                    }
                     break;
                 case 2:
                     //Decimal a binario
@@ -86,9 +110,58 @@ public class estructurasControl {
                     System.out.println("El numero binario es: " + binario);
                     break;
                 case 3:
-                
+                    //convertir temperaturas --------------------------------------------------
+                    System.out.println("Bienvenido al convertidor de temperaturas :3");
+                    System.out.println("Seleccion lo que desea convertir: ");
+                    System.out.println("1.- Convertir a Fahereint\n");
+                    System.out.println("2.-Convertir a Celsius\n");
+                    System.out.println("3.-Convertir a Kelvin\n");
+                    System.out.println("4.-Convertir a Rankine\n");
+        
+                    opConvertir = entrada.nextInt();
+                    switch(opConvertir){
+                        case 1:
+                                System.out.println("Ingrese cantidad a convertir: ");
+                                cantidadConvertir = entrada.nextFloat();
+                                fah = (float)(cantidadConvertir * 1.8) + 32;
+                                System.out.println("La conversion de Fahereint a centigrados es: " + fah);
+                            break;
+                        case 2:
+                                System.out.println("Ingrese cantidad a convertir: ");
+                                cantidadConvertir = entrada.nextFloat();
+                                cen = (float) ((cantidadConvertir - 32) / 1.8);
+                                System.out.println("La conversion de centigrados a Fahereint es: " + cen);
+                                break;
+                        case 3:
+                                System.out.println("Ingrese cantidad a convertir: ");
+                                cantidadConvertir = entrada.nextFloat();
+                                kel = ((cantidadConvertir + 49.67) / 5/9);
+                                System.out.println("La conversion de Fahereint a Kelvin es: " + kel);
+                            break;
+                        case 4:
+                                System.out.println("Ingrese cantidad a convertir: ");
+                                cantidadConvertir = entrada.nextFloat();
+                                ran = (float)((cantidadConvertir - 32) + 491.67);
+                                System.out.println("La conversion de Fahereint a Kelvin es: " + ran);
+                                break;
+                        default:
+                            System.out.println("Solo dos operadores permitidos del 1 al 2");
+                            break;
+                    }
                     break;
                 case 4:
+                        //numeros negativos o positivos
+                        System.out.println("Saber si es numero negativo o positivo\n");
+                        System.out.println("Ingrese un numero: ");
+                        numero = entrada.nextFloat();
+                        // Comparar
+                        if (numero == 0) {
+                            System.out.println("El número es neutro");
+                        } else if (numero < 0) {
+                            System.out.println("El número es negativo");
+                        } else {
+                            System.out.println("El número es positivo");
+                        }
                     break;
                 case 5:
                     System.out.println("Bienvenido a la tiendita Pepsi");
@@ -109,6 +182,60 @@ public class estructurasControl {
                     System.out.println("El total de la compra es: " + compra);
                     break;
                 case 6:
+                    //area y perimetro
+                    System.out.println("Bienvenido, para saber el area y perimetro de las figuaras porfavor: ");
+                    System.out.println("1.-Triangulo");
+                    System.out.println("2.-Rectangulo");
+                    System.out.println("3.-Volumen de una esfera");
+                    System.out.println("4.-Volumen de un cilindro");
+
+                    opFigura = entrada.nextInt();
+                    
+                    switch(opFigura){
+                        case 1:
+                            System.out.println("Ingrese su base: ");
+                            base = entrada.nextFloat();
+                            System.out.println("Ingrese su altura: ");
+                            altura = entrada.nextFloat();
+                            //triangulo
+                            area = base * altura;
+                            System.out.println("Ingrese su lado del triangulo: ");
+                            lado = entrada.nextFloat();
+                            perimetro = lado + lado + lado;
+                            System.out.println("El area de un triangulo es: " + area);
+                            System.out.println("El perimetro de un triangulo es: " + perimetro);
+                        break;
+                        case 2:
+                            System.out.println("Ingrese su base: ");
+                            base = entrada.nextFloat();
+                            System.out.println("Ingrese su altura: ");
+                            altura = entrada.nextFloat();
+                            //triangulo
+                            area = base * altura;
+                            System.out.println("Ingrese base del rectangulo: ");
+                            base = entrada.nextFloat();
+                            System.out.println("Ingrese su altura del rectangulo: ");
+                            altura = entrada.nextFloat();
+                            perimetro = ((2*base) + (2*altura));
+                            System.out.println("El area de un triangulo es: " + area);
+                            System.out.println("El perimetro de un triangulo es: " + perimetro);
+                        break;
+                        case 3:
+                            System.out.println("Ingrese el radio de la esfera: ");
+                            radio = entrada.nextFloat();
+                            volumen = (float) (3/4*Math.PI*Math.pow(radio, 3));
+                            System.out.println("El volumen de una esfera es: " + volumen);
+                        break;
+                        case 4:
+                            System.out.println("Ingrese su radio: ");
+                            radio = entrada.nextDouble();
+                            System.out.println("Ingrese su altura: ");
+                            altura = entrada.nextFloat();
+
+                            volumen = (float) (Math.PI * Math.pow(radio, 2) * altura);
+                            System.out.println("El volumen de un cilindro es: " + volumen);
+                        break;
+                    }
                     break;
                 case 7:
                     break;
