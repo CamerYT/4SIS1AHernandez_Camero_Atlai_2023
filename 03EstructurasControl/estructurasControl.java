@@ -16,6 +16,8 @@
     14. Salir
 */
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 public class estructurasControl {
     
     public static void main(String [] args){
@@ -29,7 +31,8 @@ public class estructurasControl {
         Scanner entrada = new Scanner(System.in);
         //declaracion
         //ocupara un espacio de memoria
-        int opcion, numBinario, total, cantidadProducto, num1;
+        int opcion, numBinario, cantidadProducto, num1;
+        double total;
         float precio, resultado = 0, compra = 0; //iniacializacion de la variable
         String nombreProducto;
         String binario = "";
@@ -47,6 +50,17 @@ public class estructurasControl {
         float area, perimetro, base, altura, lado, volumen;
         double radio;
         int opFigura;
+        //case 8:
+        int fact = 1;  
+        int number;
+        //case 9
+        int secuencia;
+        String asteristico = "*";
+        //case 10
+        char elegirNum;
+        float suma,resta,mult,div;
+        int mensaje;
+        
         do{
             //aqui estara el programa
             System.out.println("Bienvenido al programa: ");
@@ -239,17 +253,75 @@ public class estructurasControl {
                     break;
                 case 7:
                     break;
-                case 8:
+                case 8:  
+                    System.out.println("Ingrese cantidad");
+                    number = entrada.nextInt();
+                    if(number >= 0){
+                            for(int i = 1; i <= number; i++){    
+                            fact = fact * i;    
+                        }
+                        System.out.println("Factorial de "+ number +" es: " + fact);    
+                    }else if(number <= 0){
+                        System.out.println("Solo numeros positivos");
+                    }
                     break;
                 case 9:
+                    System.out.println("Ingrese cantidad: ");
+                    secuencia = entrada.nextInt();
+                    for(int ii = 0; ii <= secuencia; ii++){
+                        asteristico = asteristico + "*";
+                        System.out.println(asteristico + "\n");
+                    }
                     break;
                 case 10:
                     break;
                 case 11:
+                    System.out.println("********\n");
+                    System.out.println(" ********");
+                    System.out.println("********");
+                    System.out.println(" ********");
+                    System.out.println("********");
+                    System.out.println(" ********");
+                    System.out.println("********");
+                    System.out.println(" ********");
                     break;
                 case 12:
                     break;
                 case 13:
+                    System.out.println(("Bienvenido a la calculadora Pepsi Blue"));
+                    System.out.println("Desea entrar al programa? [s] para si o [n] para no: ");
+                    elegirNum = entrada.next().charAt(0);
+
+                    if(elegirNum == 's' || elegirNum == 'S'){
+                        
+                        mensaje = Integer.parseInt(JOptionPane.showInputDialog("MENU OPERACIONES\n 1.-Suma \n 2.-Resta \n 3.-Multiplicacion \n 4.-Division"));
+                        switch(mensaje){
+                            case 1:
+                                suma = Float.parseFloat(JOptionPane.showInputDialog("Ingrese cantidad: "));
+                                suma = Float.parseFloat(JOptionPane.showInputDialog("Ingrese segunda cantidad: "));
+                                total = (float) (suma + suma); 
+                                JOptionPane.showMessageDialog(null, "La suma es: " + total);
+                            break;
+                            case 2:
+                                resta = Float.parseFloat(JOptionPane.showInputDialog("Ingrese cantidad: "));
+                                resta = Float.parseFloat(JOptionPane.showInputDialog("Ingrese segunda cantidad: "));
+                                total = (float) (resta - resta);
+                                JOptionPane.showMessageDialog(null, "La resta es: " + total);
+                            break;
+                            case 3:
+                                mult = Float.parseFloat(JOptionPane.showInputDialog("Ingrese cantidad: "));
+                                mult = Float.parseFloat(JOptionPane.showInputDialog("Ingrese segunda cantidad: "));
+                                total = (float) (mult * mult);
+                                JOptionPane.showMessageDialog(null, "La multiplicion es: " + total);
+                            break;
+                            case 4:
+                                div = Float.parseFloat(JOptionPane.showInputDialog("Ingrese cantidad: "));
+                                div = Float.parseFloat(JOptionPane.showInputDialog("Ingrese segunda cantidad: "));
+                                total = (float) (div / div);
+                                JOptionPane.showMessageDialog(null, "La Division es: " + total);
+                            break;
+                        }
+                    }
                     break;
                 case 14:
                     break;
@@ -277,4 +349,5 @@ public class estructurasControl {
 
 
     }
+
 }
