@@ -252,6 +252,10 @@ public class estructurasControl {
                     }
                     break;
                 case 7:
+                    //tabla hecho por el ms
+                    for (int n = 1; n <= 10; n++){
+                        System.out.println(n + " " + (n * 10) + " " +  (n * 100) + " " + (n * 1000) + " ");
+                    }
                     break;
                 case 8:  
                     System.out.println("Ingrese cantidad");
@@ -265,12 +269,21 @@ public class estructurasControl {
                         System.out.println("Solo numeros positivos");
                     }
                     break;
-                case 9:
-                    System.out.println("Ingrese cantidad: ");
-                    secuencia = entrada.nextInt();
-                    for(int ii = 0; ii <= secuencia; ii++){
-                        asteristico = asteristico + "*";
-                        System.out.println(asteristico + "\n");
+                case 9: 
+                    //mr
+                    System.out.println("Cuadro magico :3");
+                    System.out.println("Ingrese el tamaño del cuadrado a pintar: ");
+                    num1 = entrada.nextInt();
+
+                    if(num1 >= 1 && num1 <= 20){
+                        for(int i = 1; i <= num1; i++){
+                            for(int j = 1; j <= num1; j++){
+                                System.out.print("*");
+                            }
+                            System.out.println("");
+                        }
+                    }else{
+                            System.out.println("Ingrese solo numeros entre el 1 y 20");
                     }
                     break;
                 case 10:
