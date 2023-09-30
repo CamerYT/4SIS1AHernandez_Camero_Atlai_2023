@@ -43,18 +43,60 @@ class ejercicio {
     //acciones que realizara: 
 
     public void ejercicio1(){
-        
+        /*metodos vacios = porque no posee argumentos y no son metodos
+         o que necesiten algun tipo de dato*/
+
+         //calculadora
+         double num1 = 0.00, suma = 0.00, mult = 1.00;
+         char operacion;
+
+         System.out.println("Selecciona la operacion que deseas realizar:");
+         System.out.println("a.- Suma y Resta");
+         System.out.println("b.- Multiplicacion");
+         System.out.println("c.- Division");
+ 
+         operacion = entrada.next().charAt(0);
+ 
+         switch(operacion){
+            case 'a':
+                //vamos a sumar o restar tantos numeros como desee el usuario
+                //cuando coloque 0 la operacion termina
+                System.out.println("Para detener la suma o resta, ingrese el 0");
+                do{
+                    System.out.println("Ingrese los numeros que desee sumar o restar: ");
+                    num1 = entrada.nextDouble();
+                    suma += num1;
+                     //suma = suma + num1;
+                }while(num1 != 0);
+                System.out.println("El resultado de la operacion es: " + suma);
+                break;
+            case 'b':
+                System.out.println("Para detener la multiplicacion ingrese el 0");
+                do{
+                    System.out.println("Ingrese los numeros que desee sumar o restar: ");
+                    num1 = entrada.nextDouble();
+                    if(num1 != 0){
+                        mult *= num1;
+                    }
+                }while(num1 == 0);
+                System.out.println("El resultado de la operacion es: " + mult);
+                break;
+            case 'c':
+               //division de num1 / num2
+
+                break;
+        }       
     }
+
     public void ejercicio2(){
 
     }
+
     public void ejercicio3(){
 
     }
-    public void ejercicio4(){
 
-    }
-    public void ejercicio5(){
+    public void ejercicio4(){
 
     }
 
