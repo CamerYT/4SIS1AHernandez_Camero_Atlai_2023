@@ -1,9 +1,11 @@
-class Principal{
+class principal {
+    
+    //metodo main
+    public static void main(String []args){
+        //instancia de la clase ejercicios
 
-    //el metodo main
-    public static void main(String[] args){
-        //hago la intancia de la clase Ejercicios
-        Ejercicios obj = new Ejercicios();
+        ejercicio obj = new ejercicio();
         obj.menu();
+
     }
 }
