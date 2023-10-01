@@ -94,11 +94,11 @@ class ejercicio {
          * m/s a km/s
          * m a yardas y millas
         */
-        double metros = 0.00, kg = 0.00, velocidad = 0.00, cm = 100.00, pulgadas = 0.0254, gramos = 1000.00,libras = 0.453592, ms = 0.00;
+        double metros = 0.00, kg = 0.00, velocidad = 18/5, cm = 100.00, pulgadas = 0.0254, gramos = 1000.00,libras = 0.453592, yardas = 0.9144, millas = 0.00062137;
         double conversion2, conversion1;
         System.out.println("Seleccion la cantidad que desee convertir: ");
         System.out.println("a.- Metros a cm y pulgadas");
-        System.out.println("b.-");
+        System.out.println("b.- Kilometros a gramos y libras");
         System.out.println("c.- m/s a km/h");
         System.out.println("d.- Metros a yardas y millas");
 
@@ -122,9 +122,18 @@ class ejercicio {
                 + " de kg a libras son: " + conversion2);
                 break;
             case 'c':
+                System.out.println("Ingrese la cantidad que desea convertir: ");
+                metros = entrada.nextDouble();
+                conversion1 = metros * velocidad;
+                System.out.println("La cantidad converidad de m/s a kilometros por hora (km/h) es de: " + conversion1); 
                 //terminar de tarea
                 break;
             case 'd':
+            System.out.println("Ingrese la cantidad de metros que desea convertir: ");
+                metros = entrada.nextDouble();
+                conversion1 = metros * yardas;
+                conversion2 = metros * millas;
+                System.out.println("La cantidad convertida de m a yardas es: " + conversion1 + " de m a millas es: " + conversion2);
                 //terminar de tarea
                 break;
             default:
