@@ -129,7 +129,7 @@ class ejercicio {
                 //terminar de tarea
                 break;
             case 'd':
-            System.out.println("Ingrese la cantidad de metros que desea convertir: ");
+            System.out.println("Ingrese la cantidad de metros (m/s) que desea convertir: ");
                 metros = entrada.nextDouble();
                 conversion1 = metros * yardas;
                 conversion2 = metros * millas;
