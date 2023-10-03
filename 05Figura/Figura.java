@@ -14,7 +14,7 @@ public class Figura {
             System.out.println("Bienvenido seleccion la accion que quiere realizar: ");
             System.out.println("1.- Calcular Cuadrado");
             System.out.println("2.- Calcular Rectangulo");
-            System.out.println("1.- Calcular Triangulo");
+            System.out.println("3.- Calcular Triangulo");
 
             opcion = entrada.nextInt();
             switch(opcion){
@@ -39,16 +39,21 @@ public class Figura {
     }
 
     public void calcularCuadrado(){
-
         System.out.println("Ingrese el valor del lado del cuadrado: ");
-        lado = entrada.nextDouble();
-        perimetro = lado*4; 
-        area = lado*lado;
-        System.out.println("El perimetro es: " + perimetro + " .El area es: " + area);
+        try{
+            lado = entrada.nextDouble();
+            perimetro = lado*4; 
+            area = lado*lado;
+        }catch(Exception e){
+            System.out.println("Ingresa solo numeros");
+            System.out.println("Error: " + e.getMessage());   
+        }
+        System.out.println("El perimetro es: " + perimetro + " El area es: " + area);
+        letra = entrada.next().charAt(0);
     }
 
     public void calcularRectangulo(){
-
+        
     }
 
     public void calcularTriangulo(){
