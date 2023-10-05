@@ -4,7 +4,7 @@ import java.lang.Math;
 public class Figura {
     Scanner entrada = new Scanner(System.in);
 
-    double area, perimetro, lado;
+    double area, perimetro, lado,base,altura;
     int opcion;
     char letra;
 
@@ -53,7 +53,19 @@ public class Figura {
     }
 
     public void calcularRectangulo(){
-        
+        System.out.println("Ingrese el la base del cuadrado: ");
+        System.out.println("Ingrese la altura del cuadrado: ");
+        try{
+            base = entrada.nextDouble();
+            altura = entrada.nextDouble();
+            area = base * altura;
+            perimetro = (2*base) + (2*altura);
+        }catch(Exception e){
+            System.out.println("Ingresa solo numeros");
+            System.out.println("Error: " + e.getMessage());
+        }  
+        System.out.println("El area es: " + area + " perimetro es: " + perimetro);
+        letra = entrada.next().charAt(0);
     }
 
     public void calcularTriangulo(){
