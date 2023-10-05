@@ -299,6 +299,14 @@ public class estructurasControl {
                     System.out.println(" ********");
                     break;
                 case 12:
+                    System.out.println("   ***\n");
+                    System.out.println("  *****");
+                    System.out.println(" *******");
+                    System.out.println("*********");
+                    System.out.println(" *******");
+                    System.out.println("  *****");
+                    System.out.println("   ****");
+                    System.out.println("     *");
                     break;
                 case 13:
                     System.out.println(("Bienvenido a la calculadora Pepsi Blue"));
