@@ -32,7 +32,7 @@ public class cadena {
 
         int valor = 24;
         //transformar  int a String
-        String s3 = String.valueOf(valor);
+        String s3 = String.valueOf(valor); 
         System.out.println("Asi es como se convierte un valor de: "+  valor + " en cadena " + s3);
 
         //al reves
