@@ -34,10 +34,4 @@ public class Michi extends Animal{
         
    
     }
-
-
-
-
-
-
 }
