@@ -27,12 +27,19 @@ public class Estudiante extends Persona{
         this.numBoleta = numBoleta;
     }
 
-    public char getChillon(){
+    public String getChillon(){
         return chillon;
     }
-    public void setChillon(char chiillon){
+    public void setChillon(String chiillon){
         this.chillon = chillon;
     }
+
+
+    
+
+
+
+
 
 
 
