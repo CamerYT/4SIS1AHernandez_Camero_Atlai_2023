@@ -16,7 +16,7 @@ public class Animal {
     //Para el encapsulamiento se debe crear el constructor, sirve para declarar
     //existencia de un clase, para inicializar las varibles 
     //instancias de una clase
-
+ 
     //definir un constructor
     public Animal (){ 
         //este es un constructor por defecto

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MostrarMenuAnimales extends Animal{
     
-    private int numVidas;
+    private int numVidas; 
     void menu(){
         char letra;
         do{
