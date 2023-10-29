@@ -43,7 +43,7 @@ public class AccionesPersona {
     public void agregarPersona(Persona persona){
         //al definirlo como objeto no importa cuantos datos ahiga 
         //listapersona para agragarlo
-        listaPersonas.add(p);
+        listaPersonas.add(persona);
     }
 
     //buscar una persona por su id entrada y salida
