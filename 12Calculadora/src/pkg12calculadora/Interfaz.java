@@ -9,6 +9,7 @@ package pkg12calculadora;
  * @author Atlai Camero
  */
 //import java.awt.FlowLayout;
+import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -77,7 +78,7 @@ public class Interfaz extends JFrame implements ActionListener{
         //empiezo con sus definiciones
         //no cargue absolutamente nada, la carga de etiqueta
         panel.setLayout(null);
-        
+        panel.setBackground(Color.ORANGE); //darle color a la pantalla
         //carga de etiqueta
         numero1 = new JLabel("Numero 1");
         numero1.setBounds(10, 10, 70, 30);
@@ -371,8 +372,7 @@ public class Interfaz extends JFrame implements ActionListener{
     }
 
     
-
-    
+   
     
 }
     
