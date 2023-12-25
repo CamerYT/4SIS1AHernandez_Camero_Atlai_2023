@@ -3,6 +3,7 @@ import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -44,21 +45,26 @@ public class fromRecarga extends javax.swing.JFrame {
         logoAT = new javax.swing.JLabel();
         logoMovi = new javax.swing.JLabel();
         logoTel = new javax.swing.JLabel();
+        buttonAt = new javax.swing.JButton();
+        buttonMovi = new javax.swing.JButton();
+        buttonTel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(239, 31, 31));
-        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(51, 51, 51)));
 
         jLabel1.setText("jLabel1");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Hola, soy el Juan alias el (juancito), porfavor.");
+        jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(153, 153, 153)));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Selecciona la compañia con el boton que tienen abajo.");
+        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(153, 153, 153)));
 
         logoAT.setBackground(new java.awt.Color(255, 255, 255));
         logoAT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -66,6 +72,36 @@ public class fromRecarga extends javax.swing.JFrame {
         logoMovi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         logoTel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        buttonAt.setBackground(new java.awt.Color(0, 0, 0));
+        buttonAt.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        buttonAt.setForeground(new java.awt.Color(255, 255, 255));
+        buttonAt.setText("Recarca AT&T");
+        buttonAt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAtActionPerformed(evt);
+            }
+        });
+
+        buttonMovi.setBackground(new java.awt.Color(0, 0, 0));
+        buttonMovi.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        buttonMovi.setForeground(new java.awt.Color(255, 255, 255));
+        buttonMovi.setText("Recarga Movistar");
+        buttonMovi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMoviActionPerformed(evt);
+            }
+        });
+
+        buttonTel.setBackground(new java.awt.Color(0, 0, 0));
+        buttonTel.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        buttonTel.setForeground(new java.awt.Color(255, 255, 255));
+        buttonTel.setText("Recarga Telcel");
+        buttonTel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonTelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -76,19 +112,27 @@ public class fromRecarga extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(imagenNino, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addComponent(logoAT, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
+                        .addGap(65, 65, 65)
                         .addComponent(logoMovi, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
+                        .addGap(52, 52, 52)
                         .addComponent(logoTel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(buttonAt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(buttonMovi)
+                .addGap(138, 138, 138)
+                .addComponent(buttonTel)
+                .addGap(141, 141, 141))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,18 +140,22 @@ public class fromRecarga extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imagenNino, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(20, 20, 20)
-                            .addComponent(jLabel1))))
+                            .addComponent(jLabel1)))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(logoAT, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
                     .addComponent(logoMovi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(logoTel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonAt)
+                    .addComponent(buttonMovi)
+                    .addComponent(buttonTel))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -123,6 +171,144 @@ public class fromRecarga extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonAtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAtActionPerformed
+        // recarga de AT&T
+        String logAt = logoAT.getText();
+        int op = 0;
+        char seguirONo;
+        String numeroCel;
+        do{
+            op = Integer.parseInt(JOptionPane.showInputDialog("Seleccione la cantidad: \n " + 
+                    "1.- Recarga de 20 \n" +
+                    "2.- Recarga de 50 \n" + 
+                    "3.- Recarga de 100 \n" + 
+                    "4.- Recarga de 150 \n" + 
+                    "5.- Salir"));
+            switch(op){
+                case 1:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 20 de A&YT \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 2:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 50 de A&YT \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 3:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 100 de A&YT \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 4:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 150 de A&YT \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 5:
+                    JOptionPane.showMessageDialog(null, "Gracias vuelva pronto!!");
+                    break;
+                default:
+                    break;
+            }
+            seguirONo = JOptionPane.showInputDialog("¿Deseas hacer otra recarga?" + " [S] o [s] para Continuar o [n] o [N] para cancelar ").charAt(0);
+            
+        }while(seguirONo == 'S' || seguirONo == 's');
+        JOptionPane.showMessageDialog(null, "Gracias vuelva pronto!!");
+    }//GEN-LAST:event_buttonAtActionPerformed
+
+    private void buttonMoviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMoviActionPerformed
+        // recarga Movistar
+        String logAt = logoMovi.getText();
+        int op = 0;
+        char seguirONo;
+        String numeroCel;
+        do{
+            op = Integer.parseInt(JOptionPane.showInputDialog("Seleccione la cantidad: \n " + 
+                    "1.- Recarga de 20 \n" +
+                    "2.- Recarga de 50 \n" + 
+                    "3.- Recarga de 100 \n" + 
+                    "4.- Recarga de 150 \n" + 
+                    "5.- Salir"));
+            switch(op){
+                case 1:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 20 de Movistar \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 2:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 50 de Movistar \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 3:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 100 de Movistar \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 4:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 150 de Movistar \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 5:
+                    JOptionPane.showMessageDialog(null, "Gracias vuelva pronto!!");
+                    break;
+                default:
+                    break;
+            }
+            seguirONo = JOptionPane.showInputDialog("¿Deseas hacer otra recarga?" + " [S] o [s] para Continuar o [n] o [N] para cancelar ").charAt(0);
+            
+        }while(seguirONo == 'S' || seguirONo == 's');
+        JOptionPane.showMessageDialog(null, "Gracias vuelva pronto!!");
+    }//GEN-LAST:event_buttonMoviActionPerformed
+
+    private void buttonTelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTelActionPerformed
+        // recarga Telcel
+        String logAt = logoAT.getText();
+        int op = 0;
+        char seguirONo;
+        String numeroCel;
+        do{
+            op = Integer.parseInt(JOptionPane.showInputDialog("Seleccione la cantidad: \n " + 
+                    "1.- Recarga de 20 \n" +
+                    "2.- Recarga de 50 \n" + 
+                    "3.- Recarga de 100 \n" + 
+                    "4.- Recarga de 150 \n" + 
+                    "5.- Salir"));
+            switch(op){
+                case 1:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 20 de Telcel \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 2:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 50 de Telcel \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 3:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 100 de Telcel \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 4:
+                    numeroCel = JOptionPane.showInputDialog("Ingrese el numero: ");
+                    JOptionPane.showMessageDialog(null,"Tu recibo \n" + " La recarga de 150 de Telcel \n" + 
+                            " y su numero de celular es: " + numeroCel);
+                    break;
+                case 5:
+                    JOptionPane.showMessageDialog(null, "Gracias vuelva pronto!!");
+                    break;
+                default:
+                    break;
+            }
+            seguirONo = JOptionPane.showInputDialog("¿Deseas hacer otra recarga?" + " [S] o [s] para Continuar o [n] o [N] para cancelar ").charAt(0);
+            
+        }while(seguirONo == 'S' || seguirONo == 's');
+        JOptionPane.showMessageDialog(null, "Gracias vuelva pronto!!");
+    }//GEN-LAST:event_buttonTelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,6 +353,9 @@ public class fromRecarga extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonAt;
+    private javax.swing.JButton buttonMovi;
+    private javax.swing.JButton buttonTel;
     private javax.swing.JLabel imagenNino;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

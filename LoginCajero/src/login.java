@@ -17,7 +17,7 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
         initComponents();
     }
 
@@ -157,7 +157,9 @@ public class login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Aqui es el button para hacer recarga
         JOptionPane.showMessageDialog(null, "soy Juan, con gusto realizare tu recarga");
-        
+        fromRecarga recarga = new fromRecarga();
+        recarga.setVisible(true);
+        this.setVisible(false);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
