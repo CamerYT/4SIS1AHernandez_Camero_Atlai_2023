@@ -21,7 +21,7 @@ public class fromRecarga extends javax.swing.JFrame {
      */
     public fromRecarga() {
         initComponents();
-        this.setLocationRelativeTo(this);
+        setLocationRelativeTo(null);
         SetImageIcon(imagenNino, "src/misImagenes/niñoCajero.jpg");
         SetImageIcon(logoAT, "src/misImagenes/logoCelAT.png");
         SetImageIcon(logoMovi, "src/misImagenes/logoMovistar.jpg");
