@@ -22,6 +22,7 @@ public class fromRecarga extends javax.swing.JFrame {
     public fromRecarga() {
         initComponents();
         setLocationRelativeTo(null);
+        this.setTitle("Apartado de Recargas");
         SetImageIcon(imagenNino, "src/misImagenes/niñoCajero.jpg");
         SetImageIcon(logoAT, "src/misImagenes/logoCelAT.png");
         SetImageIcon(logoMovi, "src/misImagenes/logoMovistar.jpg");
@@ -59,12 +60,10 @@ public class fromRecarga extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Hola, soy el Juan alias el (juancito), porfavor.");
-        jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(153, 153, 153)));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Selecciona la compañia con el boton que tienen abajo.");
-        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(153, 153, 153)));
 
         logoAT.setBackground(new java.awt.Color(255, 255, 255));
         logoAT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));

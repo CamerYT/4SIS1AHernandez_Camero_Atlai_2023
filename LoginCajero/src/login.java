@@ -17,6 +17,7 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setTitle("Menu");
         setLocationRelativeTo(null);
         initComponents();
     }
@@ -165,7 +166,10 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // btn para agregar productos
+        ProductosOxxo compraProductos = new ProductosOxxo();
+        compraProductos.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton3ActionPerformed
 

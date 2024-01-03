@@ -17,6 +17,7 @@ public class LoginOxxo extends javax.swing.JFrame {
      */
     public LoginOxxo() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setTitle("Login para entrar");
         setLocationRelativeTo(null);
         initComponents();
     }
@@ -64,6 +65,11 @@ public class LoginOxxo extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
 
         jTextField2.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Malgun Gothic", 1, 14)); // NOI18N
@@ -170,6 +176,10 @@ public class LoginOxxo extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments

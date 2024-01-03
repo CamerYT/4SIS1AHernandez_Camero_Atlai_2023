@@ -22,6 +22,7 @@ public class fromTranferencia extends javax.swing.JFrame {
     public fromTranferencia() {
         initComponents();
         setLocationRelativeTo(null);
+        this.setTitle("Ventana de Retiro y Transferencia");
         SetImageIcon(iconoDinero, "src/misImagenes/iconoDinero.jpg");
         SetImageIcon(logoBBVA, "src/misImagenes/LogoBBVA.jpg");
         SetImageIcon(logoAzteca, "src/misImagenes/LogoBANCOAZTECA.png");
@@ -147,10 +148,11 @@ public class fromTranferencia extends javax.swing.JFrame {
                         .addComponent(logoSantander, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE))
                     .addComponent(logoAzteca, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton1)
+                        .addComponent(jButton3)))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
 
