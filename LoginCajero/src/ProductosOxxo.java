@@ -66,6 +66,7 @@ public class ProductosOxxo extends javax.swing.JFrame {
         lbImporte = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(239, 31, 31));
@@ -142,6 +143,16 @@ public class ProductosOxxo extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel14.setText("PRODUCTOS OXXO!!!");
 
+        btnVolver.setBackground(new java.awt.Color(0, 0, 0));
+        btnVolver.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnVolver.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -171,7 +182,8 @@ public class ProductosOxxo extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel8)
@@ -228,11 +240,17 @@ public class ProductosOxxo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(lbIva))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(lbTotal))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(lbTotal))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnVolver)
+                        .addGap(35, 35, 35))))
         );
 
         pack();
@@ -266,6 +284,13 @@ public class ProductosOxxo extends javax.swing.JFrame {
         borrarVenta();
             
     }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        // btn para volver a menu
+        login volverMenuInicio = new login();
+        volverMenuInicio.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVolverActionPerformed
     public boolean buscarVenta(Ventas nueva){
         for(Ventas v : listaVentas){
             if(v.getId() == nueva.getId()){
@@ -366,6 +391,7 @@ public class ProductosOxxo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JComboBox<String> cboProducto;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;

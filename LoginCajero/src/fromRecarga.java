@@ -49,6 +49,7 @@ public class fromRecarga extends javax.swing.JFrame {
         buttonAt = new javax.swing.JButton();
         buttonMovi = new javax.swing.JButton();
         buttonTel = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,6 +103,16 @@ public class fromRecarga extends javax.swing.JFrame {
             }
         });
 
+        btnVolver.setBackground(new java.awt.Color(0, 0, 0));
+        btnVolver.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        btnVolver.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver.setText("Volver ");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -118,11 +129,14 @@ public class fromRecarga extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
-                        .addComponent(logoAT, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(65, 65, 65)
-                        .addComponent(logoMovi, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(logoTel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(logoAT, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(65, 65, 65)
+                                .addComponent(logoMovi, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52)
+                                .addComponent(logoTel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(8, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
@@ -154,7 +168,9 @@ public class fromRecarga extends javax.swing.JFrame {
                     .addComponent(buttonAt)
                     .addComponent(buttonMovi)
                     .addComponent(buttonTel))
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(btnVolver)
+                .addGap(53, 53, 53))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -309,6 +325,13 @@ public class fromRecarga extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Gracias vuelva pronto!!");
     }//GEN-LAST:event_buttonTelActionPerformed
 
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        // btn para volver al menu de opciones
+        login volverAlMenu = new login();
+        volverAlMenu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVolverActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -352,6 +375,7 @@ public class fromRecarga extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnVolver;
     private javax.swing.JButton buttonAt;
     private javax.swing.JButton buttonMovi;
     private javax.swing.JButton buttonTel;
